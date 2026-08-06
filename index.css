@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #F4EFE4;
+}
+
+main{
+    background-color: #F4EFE4;
+    width: 420px;
+    border: 2px solid #0EA5E9;
+    border-radius: 10px;
+    padding: 30px 40px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px; /*Peguei no site Css Scan*/
+}
+
+main h1{
+    font-size: 36px;
+    text-align: center;
+}
+
+.input-box {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 30px 0;
+}
+
+.input-box input {
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border: 2px solid #0EA5E9;
+    border-radius: 40px;
+    outline: none;
+    font-size: 16px;
+    padding: 20px 45px 20px 20px;
+}
+
+.input-box input::placeholder {
+    color: #0EA5E9;
+}
+
+.input-box i{
+    position: absolute; /*Posicionar um elemento em um ponto específico*/
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+     font-size: 20px;
+     color: #0EA5E9;
+}
+
+.lembrar-senha {
+    display: flex;
+    justify-content: space-between;
+
+    margin: -15px 0 15px; /*3 valores - paddin/margin: 20px 10px 30px - Em cima, dos lados, embaixo*/
+}
+
+.lembrar-senha label input {
+    accent-color: #0EA5E9;
+    margin-right: 5px;
+}
+
+.lembrar-senha a{
+    text-decoration: none;
+    color: #0EA5E9;
+}
+
+.lembrar-senha a:hover {
+    color: #0792d3;
+    text-decoration: underline;
+}
+
+button {
+    width: 100%;
+    height: 50px;
+    background: transparent;
+    border-radius: 40px;
+    border: 2px solid #0EA5E9;
+    color: #0EA5E9;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #0792d3;
+    color: #000000;
+    border-color: #0792d3;
+    transition: 0.4s ease;
+}
+
+.registrar {
+    font-size: 14px;
+    text-align: center;
+    margin: 15px 0 15px;
+}
+
+.registrar a {
+    text-decoration: none;
+    color: #0EA5E9;
+    font-weight: 600;
+}
+
+.registrar a:hover {
+    text-decoration: underline;
+    color: #0792d3;
+}
