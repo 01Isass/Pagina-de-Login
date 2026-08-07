@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
 
-*{
+* {
     padding: 0;
     margin: 0;
-    box-sizing: border-box;
     font-family: 'Plus Jakarta Sans', sans-serif;
+    box-sizing: border-box;
 }
 
 body{
@@ -25,8 +25,8 @@ main{
 }
 
 main h1{
-    font-size: 36px;
     text-align: center;
+    font-size: 36px;
     color: #0EA5E9;
 }
 
@@ -45,7 +45,7 @@ main h1{
     border-radius: 40px;
     outline: none;
     font-size: 16px;
-    padding: 20px 45px 20px 20px;
+    padding: 0px 20px 0px 20px;
 }
 
 .input-box input::placeholder {
@@ -53,69 +53,47 @@ main h1{
 }
 
 .input-box i{
-    position: absolute; /*Posicionar um elemento em um ponto específico*/
+    position: absolute;
     right: 20px;
     top: 50%;
     transform: translateY(-50%);
-     font-size: 20px;
-     color: #0EA5E9;
-}
-
-.lembrar-senha {
-    display: flex;
-    justify-content: space-between;
-
-    margin: -15px 0 15px; /*3 valores - paddin/margin: 20px 10px 30px - Em cima, dos lados, embaixo*/
-}
-
-.lembrar-senha label input {
-    accent-color: #0EA5E9;
-    margin-right: 5px;
-}
-
-.lembrar-senha a{
-    text-decoration: none;
     color: #0EA5E9;
+    font-size: 20px;
 }
 
-.lembrar-senha a:hover {
-    color: #0792d3;
-    text-decoration: underline;
-}
-
-button {
+button{
     width: 100%;
-    height: 50px;
-    background: transparent;
-    border-radius: 40px;
-    border: 2px solid #0EA5E9;
+    height: 100%;
     color: #0EA5E9;
-    cursor: pointer;
+    background-color: transparent;
+    border: 2px solid #0EA5E9;
+    border-radius: 40px;
+    padding: 15px;
     font-size: 16px;
-    font-weight: 600;
+    cursor: pointer;
+    font-weight: 600; /*Coloca como se fosse um negrito*/
     margin-top: 20px;
 }
 
-button:hover {
+button:hover{
+    color: black;
     background-color: #0792d3;
-    color: #000000;
-    border-color: #0792d3;
     transition: 0.4s ease;
+    border-color: #0792d3;
 }
 
-.registrar {
-    font-size: 14px;
+.logar {
+   padding: 15px; 
+    font-size: 16px;
     text-align: center;
-    margin: 15px 0 15px;
 }
 
-.registrar a {
+.logar a{
     text-decoration: none;
     color: #0EA5E9;
-    font-weight: 600;
 }
 
-.registrar a:hover {
-    text-decoration: underline;
+.logar a:hover{
     color: #0792d3;
+    text-decoration: underline;
 }
