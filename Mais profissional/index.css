@@ -19,7 +19,7 @@ body {
 .content {
     border-radius: 15px;
     background-color: #fff;
-    width: 80%;
+    width: 60%;
     height: 50vh;
     display: flex;
     justify-content: space-between;
@@ -37,11 +37,14 @@ body {
     width: 33%;
     height: 100%;
     z-index: 1; /* Fica atrás de todo o texto */
+
+
+    left: 70%;
 }
 
 .first-content {
     display: flex;
-    
+    display: none;
 }
 
 .title {
@@ -53,11 +56,22 @@ body {
     color: #fff;
 }
 
+.title-second {
+    color: #58af9b;
+}
+
 .description {
     font-size: 14px;
     font-weight: 300;
-    color: #fff;
     line-height: 30px;
+}
+
+.description-primary {
+    color: #fff;
+}
+
+.description-second {
+    color: #7f8c8d;
 }
 
 .btn {
@@ -66,6 +80,11 @@ body {
     color: #fff;
     cursor: pointer;
     font-weight: bold;
+    width: 150px;
+    padding: 10px;
+    align-self: center; /*align-self é usado nos filhos. btn é filho do form. Pq o form tem um display flex*/
+    border: none;
+    margin-top: 1rem;
 }
 
 .btn-primary {
@@ -80,6 +99,17 @@ body {
     color: #58af9b;
 }
 
+.btn-second {
+    background-color: #58af9b;
+    border: 1px solid #58af9b;
+}
+
+.btn-second:hover {
+    background-color: #fff;
+    border: 1px solid #58af9b;
+    color: #58af9b;
+}
+
 .first-column {
     text-align: center;
     flex: 1 0 0;
@@ -88,18 +118,83 @@ body {
 
 .second-column {
     flex: 2 0 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.social-media {
+    margin: 1rem 0;
+}
+
+.link-social-media:not(:first-child) {
+    margin-left: 10px;
+}
+
+.link-social-media:hover .item-social-media{
+    background-color: #58af9b;
+    color: #fff;
+    border-color: #58af9b;
 }
 
 .list-social-media {
     display: flex;
+    list-style-type: none;
+}
+
+.item-social-media {
+    border: 1px solid #bdc3c7;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    line-height: 35px; /*Os icones do FontAwesome são considerados textos*/
+    text-align: center;
+    color: #95a5a6;
 }
 
 .form {
     display: flex;
     flex-direction: column;
-}
-.second-content {
-    position: absolute;
-    display: none;
+    width: 55%;
 }
 
+.form input {
+    height: 45px;
+    border: none;
+    background-color: #ecf0f1;
+    width: 100%;
+}
+
+.label-input {
+    background-color: #ecf0f1;
+    display: flex;
+    align-items: center;
+    margin: 8px;
+}
+
+.icon-modify {
+    color: #7f8c8d;
+    padding: 0 5px;
+}
+
+/*SECOND CONTENT*/
+
+.second-content {
+    position: absolute;
+    display: flex;
+}
+
+.second-content .first-column {
+    order: 2;
+}
+
+.second-content .second-column {
+    order: 1;
+}
+
+.password {
+    color: #34495e;
+    font-size: 14px;
+    margin: 15px 0;
+    text-align: center;
+}

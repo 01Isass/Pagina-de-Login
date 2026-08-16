@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="index.css">
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/621d9e0727.js" crossorigin="anonymous"></script>
     <title>Login</title>
 </head>
 <body>
@@ -17,26 +18,39 @@
             <div class="content first-content">
                 <div class="first-column">
                     <h2 class="title title-primary">Bem vindo de volta!</h2>
-                    <p class="description">Fique conosco e mantenha seu caixa atualizado</p>
-                    <p class="description">Para entrar na sua conta coloque suas informações cadastradas anteriormente</p>
+                    <p class="description description-primary">Fique conosco e mantenha seu caixa atualizado</p>
+                    <p class="description description-primary">Para entrar na sua conta coloque suas informações cadastradas anteriormente</p>
                     <button class="btn btn-primary">Entrar</button>
                 </div>
 
                 <div class="second-column">
-                    <h2 class="title">Criar Conta</h2>
+                    <h2 class="title title-second">Criar Conta</h2>
                     <div class="social-media">
                         <ul class="list-social-media">
-                            <li><a href="#">Facebook</a></li>
-                            <li><a href="#">Google</a></li>
+                            <a class="link-social-media" href=""><li class="item-social-media"><i class="fa-brands fa-facebook-f"></i></li></a>
+                            <a class="link-social-media" href=""><li class="item-social-media"><i class="fa-brands fa-google"></i></li></a>
                         </ul>
                     </div>
-                    <p class="description">Ou utilize seu email para o registro</p>
+                    <p class="description description-second">Ou utilize seu email para o registro</p>
 
                     <form action="" class="form">
-                        <input type="text" placeholder="Nome">
-                        <input type="email" placeholder="Email">
-                        <input type="password" placeholder="Senha">
-                        <button class="btn">Registrar</button>
+
+                        <label class="label-input" for="">
+                            <i class="fa-regular fa-user icon-modify"></i>
+                            <input type="text" placeholder="Nome">
+                        </label>
+                        
+                        <label class="label-input" for="">
+                            <i class="fa-regular fa-envelope icon-modify"></i>
+                            <input type="email" placeholder="Email">
+                        </label>
+                        
+                        <label class="label-input" for="">
+                            <i class="fa-solid fa-lock icon-modify"></i>
+                            <input type="password" placeholder="Senha">
+                        </label>
+                        
+                        <button class="btn btn-second">Registrar</button>
                     </form>
                 </div>
             </div>
@@ -44,27 +58,35 @@
             <!-- SEGUNDO CONTEÚDO (Login / Boas-vindas) -->
             <div class="content second-content">
                 <div class="first-column">
-                    <h2 class="title">Olá amigo!</h2>
-                    <p class="description">Fique conosco e mantenha seu caixa atualizado</p>
-                    <p class="description">Comece agora!</p>
-                    <button class="btn">Cadastrar</button>
+                    <h2 class="title title-primary">Olá amigo!</h2>
+                    <p class="description description-primary">Fique conosco e mantenha seu caixa atualizado</p>
+                    <p class="description description-primary">Comece agora!</p>
+                    <button class="btn btn-primary">Cadastrar</button>
                 </div>
 
                 <div class="second-column">
-                    <h2 class="title">Entre na sua Conta</h2>
+                    <h2 class="title title-second">Entre na sua Conta</h2>
                     <div class="social-media">
                         <ul class="list-social-media">
-                            <li><a href="#">Facebook</a></li>
-                            <li><a href="#">Google</a></li>
+                            <a class="link-social-media" href=""><li class="item-social-media"><i class="fa-brands fa-facebook-f"></i></li></a>
+                            <a class="link-social-media" href=""><li class="item-social-media"><i class="fa-brands fa-google"></i></li></a>
                         </ul>
                     </div>
-                    <p class="description">Ou utilize seu email</p>
+                    <p class="description description-second">Ou utilize seu email</p>
 
                     <form action="" class="form">
-                        <input type="email" placeholder="Email">
-                        <input type="password" placeholder="Senha">
-                        <a href="#">Esqueceu a senha?</a>
-                        <button class="btn">Entrar</button>
+                        
+                        <label class="label-input" for="">
+                            <i class="fa-regular fa-envelope icon-modify"></i>
+                            <input type="email" placeholder="Email">
+                        </label>
+                        
+                        <label class="label-input" for="">
+                            <i class="fa-solid fa-lock icon-modify"></i>
+                            <input type="password" placeholder="Senha">
+                        </label>
+                        <a class="password" href="#">Esqueceu sua senha?</a>
+                        <button class="btn btn-second">Entrar</button>
                     </form>
                 </div>
             </div>
