@@ -19,7 +19,7 @@ body {
 .content {
     border-radius: 15px;
     background-color: #fff;
-    width: 60%;
+    width: 55%; 
     height: 50vh;
     display: flex;
     justify-content: space-between;
@@ -39,12 +39,15 @@ body {
     z-index: 1; /* Fica atrás de todo o texto */
 
 
-    left: 70%;
+    left: 0; /*left: 67%; fica perfeito*/
+}
+
+.first-content .second-column {
+    z-index: 11;
 }
 
 .first-content {
     display: flex;
-    display: none;
 }
 
 .title {
@@ -92,6 +95,7 @@ body {
     font-size: 10px;
     padding: 10px 50px;
     border: 1px solid #fff;
+    transition: background-color .5s;
 }
 
 .btn-primary:hover {
@@ -102,6 +106,7 @@ body {
 .btn-second {
     background-color: #58af9b;
     border: 1px solid #58af9b;
+    transition: background-color .5s;
 }
 
 .btn-second:hover {
@@ -125,6 +130,9 @@ body {
 
 .social-media {
     margin: 1rem 0;
+}
+.link-social-media .item-social-media {
+    transition: background-color .5s;
 }
 
 .link-social-media:not(:first-child) {
@@ -182,14 +190,17 @@ body {
 .second-content {
     position: absolute;
     display: flex;
+    
 }
 
 .second-content .first-column {
     order: 2;
+    z-index: -1;
 }
 
 .second-content .second-column {
     order: 1;
+    z-index: -1;
 }
 
 .password {
@@ -197,4 +208,159 @@ body {
     font-size: 14px;
     margin: 15px 0;
     text-align: center;
+}
+
+.sign-up-js .content::before {
+    animation: slideout 3s;
+
+    z-index: 12;
+}
+
+.sign-in-js .first-content .first-column {
+    z-index: -1;
+}
+
+.sign-in-js .second-content .second-column {
+    z-index: 11;
+}
+
+.sign-in-js .second-content .first-column {
+    z-index: 13;
+}
+
+.sign-in-js .content::before {
+    left: 67%; /*67%*/
+
+    animation: slidein 3s;
+
+    z-index: 12;
+}
+
+.sign-up-js .second-content .first-column,
+.sign-up-js .second-content .second-column {
+    z-index: -1;
+}
+
+.sign-up-js .first-content .second-column {
+    z-index: 11;
+}
+
+.sign-up-js .first-content .first-column {
+    z-index: 13;
+}
+
+/*Deslocamento de conteúdo atrás do content:before*/
+.sign-in-js .first-content .second-column {
+    z-index: -1;
+    position: relative;
+    animation: deslocamentoEsq 3s;
+}
+
+.sign-up-js .second-content .second-column {
+    position: relative;
+    z-index: -1;
+    animation: deslocamentoDir 3s;
+}
+
+/*ANIMAÇÃO CSS PARA O CONTEÚDO*/
+
+@keyframes deslocamentoEsq {
+    from {
+        left: 0;
+        opacity: 1;
+        z-index: 12;
+    }
+
+    25% {
+        left: -80px;
+        opacity: .5;
+    }
+
+    50% {
+        left: -100px;
+        opacity: .2;
+    }
+
+    to {
+        left: -110px;
+        opacity: 0;
+        z-index: -1;
+    }
+}
+
+@keyframes deslocamentoDir {
+    from {
+        left: 0;
+        z-index: 12;
+    }
+
+    25% {
+        left: 80px;
+    }
+
+    50% {
+        left: 100px;
+    }
+
+    to {
+        left: 110px;
+        z-index: -1;
+    }
+}
+
+ /* Terminando o css. Colocado id na classe body, feito o js para mudar conforme clica no botão. Colocado animação */
+/*ANIMAÇÃO CSS para o verde indo de um lado para o outro*/
+
+@keyframes slidein {
+    from {
+        left: 0;
+        width: 40%;
+    }
+
+    25% {
+        left: 5%;
+        width: 50%;
+    }
+
+    50% {
+        left: 25%;
+        width: 60%;
+    }
+
+    75% {
+        left: 45%;
+        width: 50%;
+    }
+
+    to {
+        left: 67%;
+        width: 40%;
+    }
+}
+
+@keyframes slideout {
+    from {
+        left: 67%;
+        width: 40%;
+    }
+
+    25% {
+        left: 45%;
+        width: 50%;
+    }
+
+    50% {
+        left: 25%;
+        width: 60%;
+    }
+
+    75% {
+        left: 5%;
+        width: 50%;
+    }
+
+    to {
+        left: 0;
+        width: 40%;
+    }
 }
